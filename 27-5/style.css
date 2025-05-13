@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.top-header {
+  background-color: #fdaecb;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-family: 'cursive';
+  font-size: 18px;
+  margin: 0;
+  color: #000;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 5px;
+  border-radius: 8px;
+  flex-grow: 1;
+  margin: 10px;
+  max-width: 500px;
+}
+
+.search-bar select, .search-bar input {
+  border: none;
+  padding: 5px;
+}
+
+.search-bar input {
+  flex-grow: 1;
+}
+
+.search-bar button {
+  background: #ff2e8a;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+.user-icons a {
+  color: #000;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.cart-count {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.navbar {
+  background: #fff7f1;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #d4006c;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #d4006c;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid #ff2e8a;
+}
+.navbar a:hover::after{
+  width: 100%;
+}
+.nav-menu{
+  display: flex;
+  gap: 20px;
+}
+.hotline {
+  color: #ff0055;
+  font-weight: bold;
+  font-weight: bold;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .hotline {
+    align-self: flex-end;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+}
